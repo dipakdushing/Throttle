@@ -8,20 +8,20 @@
 </head>
 <style>
     #sub{
-        height:44px;
+        height:45px;
         width:140px;
         background-color: #87ffc5;
-        border:none;
-        border-radius: 9px;
+        border-radius: 10px;
         margin-left:45%;
         margin-top: 60px;
     }
+    
     #res{
-        font-size: 24px;
+        font-size: 25px;
         margin-left: 45%;
         margin-top: 40px;
-
     }
+    
 </style>
 <body>
     <button id="sub">Submit</button>
@@ -32,8 +32,9 @@
 <script>
 
     const throttle = (fun,delay) => {
-          let last =0;
+         var last =0;
           return (...argument) => {
+              
               const now = new Date().getTime();
               if(now-last<delay){
                   return;
@@ -50,9 +51,9 @@
         var point = "Learn Throttle.....";
        
         i++;
+        
         document.querySelector("#res").innerHTML=i+" "+point;
        
-        //console.log(arr);
         localStorage.setItem("target" , point);
         console.log("Clicked me...")
     },3400));
